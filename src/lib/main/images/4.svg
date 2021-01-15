@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="250px" height="141px" viewBox="0 0 250 141" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>5</title>
+    <defs>
+        <rect id="path-1" x="0" y="0.489051095" width="250" height="140"></rect>
+        <linearGradient x1="80.7451874%" y1="42.3376389%" x2="91.439795%" y2="70.0781214%" id="linearGradient-3">
+            <stop stop-color="#D02DC9" stop-opacity="0.321787587" offset="0%"></stop>
+            <stop stop-color="#F00BB1" stop-opacity="0.38595389" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="90.3261859%" y1="38.9918946%" x2="86.6559845%" y2="59.5835594%" id="linearGradient-4">
+            <stop stop-color="#F779D7" stop-opacity="0.47303868" offset="0%"></stop>
+            <stop stop-color="#FB4DCB" stop-opacity="0.466154939" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="90.1907764%" y1="39.7516092%" x2="86.7445099%" y2="59.0868878%" id="linearGradient-5">
+            <stop stop-color="#FF5B87" stop-opacity="0.423350087" offset="0%"></stop>
+            <stop stop-color="#C90F0F" stop-opacity="0.154747596" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="司南首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="蒙版"></g>
+            <path d="M-23.0388536,123.109168 C-27.0926624,132.411208 -18.3232175,126.725562 3.26948104,106.052231 C35.6585288,75.0422341 53.190757,80.9671203 89.5877493,92.099171 C118.901751,101.064883 170.890666,49.6897191 205.212362,77.6784075 C213.505335,84.4411693 253.142049,124.691814 259.270622,133.445834 C280.265672,163.43505 278.816183,97.6562687 254.922156,-63.8905109 L-13.0228374,-59.1920266 L-23.0388536,123.109168 Z" id="路径-6" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
+            <path d="M-80,122.094891 C-30.6676292,58.9216181 5.50400377,37.0194041 28.5148989,56.3882485 C63.0312417,85.4415151 64.5319523,99.566899 127.561796,99.566899 C190.591639,99.566899 251.767252,34.9204152 283.240788,79.8549064 C304.223146,109.811234 297.125858,62.2116432 261.948923,-62.9438653 L-74.0336556,-85.350365 L-80,122.094891 Z" id="路径-6备份" fill="url(#linearGradient-4)" mask="url(#mask-2)"></path>
+            <path d="M-52,133.335766 C-2.66762921,70.162494 33.5040038,48.26028 56.5148989,67.6291244 C91.0312417,96.682391 92.5319523,110.807775 155.561796,110.807775 C218.591639,110.807775 279.767252,46.1612911 311.240788,91.0957823 C332.223146,121.05211 325.125858,73.4525192 289.948923,-51.7029894 L-46.0336556,-74.1094891 L-52,133.335766 Z" id="路径-6备份-2" fill="url(#linearGradient-5)" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

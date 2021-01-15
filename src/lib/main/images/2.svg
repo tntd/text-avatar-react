@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="250px" height="141px" viewBox="0 0 250 141" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>路径 6备份 4</title>
+    <title>3</title>
     <defs>
         <rect id="path-1" x="0" y="0.489051095" width="250" height="140"></rect>
-        <linearGradient x1="80.7451874%" y1="42.3376389%" x2="91.7342742%" y2="70.8419638%" id="linearGradient-3">
-            <stop stop-color="#2E22FF" stop-opacity="0.321787587" offset="0%"></stop>
-            <stop stop-color="#00B2FF" stop-opacity="0.38595389" offset="100%"></stop>
+        <linearGradient x1="90.1969126%" y1="34.1944333%" x2="86.6559845%" y2="64.7307466%" id="linearGradient-3">
+            <stop stop-color="#FF2581" stop-opacity="0.321787587" offset="0%"></stop>
+            <stop stop-color="#F90014" stop-opacity="0.211374563" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="90.3663217%" y1="38.7667123%" x2="86.6559845%" y2="59.5835594%" id="linearGradient-4">
-            <stop stop-color="#7F79F7" stop-opacity="0.47303868" offset="0%"></stop>
-            <stop stop-color="#5998FF" stop-opacity="0.153654939" offset="100%"></stop>
+        <linearGradient x1="86.6559845%" y1="41.4055922%" x2="86.6559845%" y2="81.3171592%" id="linearGradient-4">
+            <stop stop-color="#FF3E3E" stop-opacity="0.883932474" offset="0%"></stop>
+            <stop stop-color="#FFA959" stop-opacity="0.180261145" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="90.1907764%" y1="39.7516092%" x2="86.730141%" y2="59.1675045%" id="linearGradient-5">
-            <stop stop-color="#5B94FF" stop-opacity="0.423350087" offset="0%"></stop>
-            <stop stop-color="#0F51C9" stop-opacity="0.154747596" offset="100%"></stop>
+        <linearGradient x1="89.8850125%" y1="41.467098%" x2="86.8072656%" y2="58.7347967%" id="linearGradient-5">
+            <stop stop-color="#FFA142" stop-opacity="0.365685096" offset="0%"></stop>
+            <stop stop-color="#FF7300" stop-opacity="0.354539991" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g id="司南首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="路径-6备份-4">
+        <g id="3">
             <mask id="mask-2" fill="white">
                 <use xlink:href="#path-1"></use>
             </mask>
