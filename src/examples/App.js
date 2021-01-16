@@ -46,7 +46,7 @@ export default props => {
 	const cardConfig = [
 		{
 			label: '部门',
-			value: '企业技术部-PaaS-UED'
+			value: '企业技术部企业技术部企业技术部-PaaS-UED'
 		},
 		{
 			label: '邮箱',

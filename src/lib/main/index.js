@@ -10,7 +10,7 @@ const Main = (props) => {
 	const {
 		nickname = '', size = 32,
 		account, empStatus, trigger = 'hover',
-		placement = 'rightTop', style = {}, onClick
+		placement = 'rightTop', style = {}, onClick, showPopover = true
 	} = props;
 
 	const isChinese = (obj) => {
@@ -44,24 +44,40 @@ const Main = (props) => {
 			className="tntx-text-avatar"
 			style={{ ...style }}
 		>
-			<Popover
-				content={
-					<PopContent
-						colorIndex={colorIndex}
-						nameWritten={nameWritten}
-						{...props}
-					/>
-				}
-				trigger={trigger}
-				placement={placement}
-				overlayClassName='tntx-text-avatar-popover'
-			>
+			{
+				showPopover &&
+				<Popover
+					content={
+						<PopContent
+							colorIndex={colorIndex}
+							nameWritten={nameWritten}
+							{...props}
+						/>
+					}
+					trigger={trigger}
+					placement={placement}
+					overlayClassName='tntx-text-avatar-popover'
+				>
+					<Avatar
+						size={size}
+						style={{
+							backgroundColor: empStatus === 2 ? disabledColor : colorList[colorIndex],
+							verticalAlign: 'middle',
+							cursor: 'default'
+						}}
+					>
+						{nameWritten}
+					</Avatar>
+				</Popover>
+			}
+			{
+				!showPopover &&
 				<Avatar
 					size={size}
 					style={{
 						backgroundColor: empStatus === 2 ? disabledColor : colorList[colorIndex],
 						verticalAlign: 'middle',
-						cursor: onClick ? 'pointer' : 'default'
+						cursor: 'pointer'
 					}}
 					onClick={() => {
 						onClick && onClick();
@@ -69,7 +85,7 @@ const Main = (props) => {
 				>
 					{nameWritten}
 				</Avatar>
-			</Popover>
+			}
 		</div>
 	);
 };
