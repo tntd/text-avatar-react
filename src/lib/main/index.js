@@ -42,7 +42,7 @@ const Main = (props) => {
 	console.log('getColors(key)', getColors(key));
 	console.log('linearGradient', linearGradient);
 
-	let colorBg = `linear-gradient(${currentColors[0]},${currentColors[1]})`;
+	let colorBg = linearGradient ? `linear-gradient(${currentColors[0]},${currentColors[1]})` : null;
 	return (
 		<div
 			className="tntx-text-avatar"

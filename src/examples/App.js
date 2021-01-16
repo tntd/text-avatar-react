@@ -40,13 +40,15 @@ export default () => {
 			id: 415,
 			account: 'fun.wang',
 			empStatus: 1,
-			nickname: '汪伦'
+			nickname: '汪伦',
+			linearGradient: true
 		},
 		{
 			id: 415,
 			account: 'gun.wang',
 			empStatus: 1,
-			nickname: '汪伦'
+			nickname: '汪伦',
+			linearGradient: true
 		}
 	];
 	const cardConfig = [
@@ -71,7 +73,7 @@ export default () => {
 				userList.map(item => {
 					return (
 						<TextAvatar
-							// size={96}
+							size={96}
 							key={item.id}
 							{...item}
 							cardConfig={cardConfig}
@@ -81,7 +83,7 @@ export default () => {
 							onClick={() => {
 								message.info('点击头像');
 							}}
-							linearGradient
+							linearGradient={true}
 						/>
 					);
 				})
