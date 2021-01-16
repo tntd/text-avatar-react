@@ -56,8 +56,8 @@ export default props => {
 	return (
 		<div
 			style={{
-				width: '400px',
-				height: '200px',
+				width: '100%',
+				textAlign: 'center',
 				margin: '200px auto'
 			}}
 		>
@@ -72,7 +72,7 @@ export default props => {
 								marginRight: '10px'
 							}}
 							onClick={() => {
-								message.info('跳转链接');
+								message.info('点击头像');
 							}}
 						/>
 					);

@@ -1,17 +1,16 @@
 import React, { useState, createContext } from 'react';
 import { waveImages, letterMap, colorList } from './constant';
 import { Avatar, Popover } from 'antd';
+import 'antd';
 import PopContent from './PopContent';
 
 import './index.less';
 
-const Disk = (props) => {
+const Main = (props) => {
 	const {
-		nickname = '', isowner = false, size = 32,
-		id, account, empStatus,
-		trigger = 'hover',
-		placement = 'rightTop',
-		style = {}, className = {}
+		nickname = '', size = 32,
+		account, empStatus, trigger = 'hover',
+		placement = 'rightTop', style = {}, onClick
 	} = props;
 
 	const isChinese = (obj) => {
@@ -42,7 +41,7 @@ const Disk = (props) => {
 
 	return (
 		<div
-			className="tntx-text-avatar-wrap"
+			className="tntx-text-avatar"
 			style={{ ...style }}
 		>
 			<Popover
@@ -55,15 +54,18 @@ const Disk = (props) => {
 				}
 				trigger={trigger}
 				placement={placement}
-				overlayClassName='tntx-text-avatar-popover-wrap'
+				overlayClassName='tntx-text-avatar-popover'
 			>
 				<Avatar
 					size={size}
 					style={{
 						backgroundColor: empStatus === 2 ? disabledColor : colorList[colorIndex],
-						verticalAlign: 'middle'
+						verticalAlign: 'middle',
+						cursor: onClick ? 'pointer' : 'default'
 					}}
-					{...this.props}
+					onClick={() => {
+						onClick && onClick();
+					}}
 				>
 					{nameWritten}
 				</Avatar>
@@ -72,4 +74,4 @@ const Disk = (props) => {
 	);
 };
 
-export default Disk;
+export default Main;
