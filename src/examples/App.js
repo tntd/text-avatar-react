@@ -1,44 +1,50 @@
 import React from 'react';
 import TextAvatar from '../lib';
-import { Icon, message } from 'antd';
+import { message } from 'antd';
 import 'antd/dist/antd.css';
 
-export default props => {
-	const user = {
-		id: 415,
-		account: 'yunting.bian',
-		empStatus: 1,
-		nickname: '卞云庭'
-	};
+export default () => {
 
 	const userList = [
 		{
 			id: 415,
-			account: 'bo.liu',
+			account: 'ao.liu',
 			empStatus: 1,
 			nickname: '柳波'
 		},
 		{
 			id: 415,
-			account: 'honggang.liang',
+			account: 'bonggang.liang',
 			empStatus: 1,
 			nickname: '梁洪刚'
 		},
 		{
 			id: 415,
-			account: 'jun.zhang',
+			account: 'cun.zhang',
 			empStatus: 1,
 			nickname: '张俊'
 		},
 		{
 			id: 415,
-			account: 'fei.ze',
+			account: 'dei.ze',
 			empStatus: 1,
 			nickname: '周泽飞'
 		},
 		{
 			id: 415,
-			account: 'lun.wang',
+			account: 'eun.wang',
+			empStatus: 1,
+			nickname: '汪伦'
+		},
+		{
+			id: 415,
+			account: 'fun.wang',
+			empStatus: 1,
+			nickname: '汪伦'
+		},
+		{
+			id: 415,
+			account: 'gun.wang',
 			empStatus: 1,
 			nickname: '汪伦'
 		}
@@ -65,6 +71,7 @@ export default props => {
 				userList.map(item => {
 					return (
 						<TextAvatar
+							// size={96}
 							key={item.id}
 							{...item}
 							cardConfig={cardConfig}
@@ -74,6 +81,7 @@ export default props => {
 							onClick={() => {
 								message.info('点击头像');
 							}}
+							linearGradient
 						/>
 					);
 				})

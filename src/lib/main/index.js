@@ -1,5 +1,5 @@
-import React, { useState, createContext } from 'react';
-import { waveImages, letterMap, colorList } from './constant';
+import React from 'react';
+import { getColors } from './constant';
 import { Avatar, Popover } from 'antd';
 import 'antd';
 import PopContent from './PopContent';
@@ -10,7 +10,7 @@ const Main = (props) => {
 	const {
 		nickname = '', size = 32,
 		account, empStatus, trigger = 'hover',
-		placement = 'rightTop', style = {}, onClick, showPopover = true
+		placement = 'rightTop', style = {}, onClick, showPopover = true, linearGradient = false
 	} = props;
 
 	const isChinese = (obj) => {
@@ -22,7 +22,6 @@ const Main = (props) => {
 	};
 
 	const key = (account && account.substr(0, 1)) || 'a';
-	const colorIndex = letterMap[key];
 	const disabledColor = '#9E9E9E';
 
 	const newNickname = nickname.match(/[^0-9]+/g) && nickname.match(/[^0-9]+/g).length > 0 ? nickname.match(/[^0-9]+/g)[0] : nickname;
@@ -39,6 +38,11 @@ const Main = (props) => {
 		}
 	}
 
+	let { currentColors, colorIndex } = getColors(key);
+	console.log('getColors(key)', getColors(key));
+	console.log('linearGradient', linearGradient);
+
+	let colorBg = `linear-gradient(${currentColors[0]},${currentColors[1]})`;
 	return (
 		<div
 			className="tntx-text-avatar"
@@ -50,6 +54,8 @@ const Main = (props) => {
 					content={
 						<PopContent
 							colorIndex={colorIndex}
+							currentColors={currentColors}
+							colorBg={colorBg}
 							nameWritten={nameWritten}
 							{...props}
 						/>
@@ -61,7 +67,8 @@ const Main = (props) => {
 					<Avatar
 						size={size}
 						style={{
-							backgroundColor: empStatus === 2 ? disabledColor : colorList[colorIndex],
+							backgroundColor: empStatus === 2 ? disabledColor : currentColors[0],
+							backgroundImage: colorBg,
 							verticalAlign: 'middle',
 							cursor: 'default'
 						}}
@@ -75,7 +82,8 @@ const Main = (props) => {
 				<Avatar
 					size={size}
 					style={{
-						backgroundColor: empStatus === 2 ? disabledColor : colorList[colorIndex],
+						backgroundColor: empStatus === 2 ? disabledColor : currentColors[0],
+						backgroundImage: colorBg,
 						verticalAlign: 'middle',
 						cursor: 'pointer'
 					}}

@@ -1,16 +1,15 @@
-import React, { useEffect, useState, Fragment } from 'react';
-import { Input, Select, message, Modal } from 'antd';
-import { waveImages, letterMap, colorList } from './constant';
+import React from 'react';
+import { waveImages } from './constant';
 
 export default props => {
-	const { nickname, colorIndex, cardConfig = [], nameWritten, onClick } = props;
+	const { nickname, cardConfig = [], nameWritten, onClick, currentColors, colorIndex, colorBg } = props;
 
 	return (
 		<div className="popover-content">
 			<div
 				className='popover-content-header'
 				style={{
-					backgroundColor: colorList[colorIndex]
+					backgroundColor: currentColors[0]
 				}}
 			>
 				<div
@@ -22,7 +21,8 @@ export default props => {
 				<div
 					className='text-avatar'
 					style={{
-						backgroundColor: colorList[colorIndex],
+						backgroundColor: currentColors[0],
+						backgroundImage: colorBg,
 						cursor: onClick ? 'pointer' : 'default'
 					}}
 					onClick={() => {

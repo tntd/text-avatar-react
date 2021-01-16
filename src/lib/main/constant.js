@@ -8,32 +8,35 @@ export const waveImages = {
 	6: require('./images/6.svg')
 };
 
-export const letterMap = {
-	a: 0,
-	b: 1,
-	c: 2,
-	d: 3,
-	e: 4,
-	f: 5,
-	g: 6,
-	h: 0,
-	i: 1,
-	j: 2,
-	k: 3,
-	l: 4,
-	m: 5,
-	n: 6,
-	o: 0,
-	p: 1,
-	q: 2,
-	r: 3,
-	s: 4,
-	t: 5,
-	u: 6,
-	v: 0,
-	w: 1,
-	x: 2,
-	y: 3,
-	z: 4
+export const letterList = [
+	'a', 'b', 'c', 'd', 'e', 'f',
+	'g', 'h', 'i', 'j', 'k', 'l',
+	'm', 'n', 'o', 'p', 'q', 'r',
+	's', 't', 'u', 'v', 'w', 'x',
+	'y', 'z'
+];
+
+export const colorList = [
+	['#3196FA', '#0066cc'],
+	['#FF606B', '#db313d'],
+	['#FF9D34', '#df5f14'],
+	['#945EF7', '#7230e9'],
+	['#F24FC4', '#ce1299'],
+	['#6a5cff', '#3d2bfb'],
+	['#58C148', '#159d00']
+];
+
+export const getColors = (letter) => {
+	let letterIndex = 0;
+	if (letter) {
+		let index = letterList.findIndex(item => item === letter);
+		if (index > -1) {
+			letterIndex = index;
+		}
+	}
+	return {
+		colorIndex: letterIndex % 7,
+		currentColors: colorList[letterIndex % 7]
+	};
 };
-export const colorList = ['#3196FA', '#FF606B', '#FF9D34', '#945EF7', '#F24FC4', '#5D4EFE', '#58C148'];
+

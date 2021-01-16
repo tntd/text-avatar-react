@@ -15,7 +15,7 @@ import TextAvatar from '@tntx/text-avatar-react';
 export default props => {
 	const user = {
 	    id: 10,
-		account: 'xiaoming.wang',
+		account: 'xiaoming',
 		empStatus: 1,
 		nickname: '王小明'	 
 	};
@@ -27,7 +27,7 @@ export default props => {
 		},
 		{
 			label: '邮箱',
-			value: 'xiaoming.wang@tongdun.net'
+			value: 'xiaoming@qq.com'
 		}
 	];
 
@@ -51,7 +51,8 @@ export default props => {
 | nickname	   | String 			| 是 			| - 			| 用户昵称 					  |
 | account 	   | String 			| 是 			| -				| 用户账号，用来判断使用颜色 	 |
 | showPopover  | boolean 		    | 否			| true			| 是否显示popover浮层 	       |
-
+| size   	   | number 			| 否 			| 32 			| 头像大小（宽高） 	    	   |
+| linearGradient   | boolean 		| 否 			| false 		| 是否渐变 	            	  |
 ### 浮层API
 |参数		  |数据类型			  |是否必填			|默认值			|备注						 |
 |  ---- 	 |  ----  			| ----  		|  ----  		| ----						|
