@@ -5,15 +5,15 @@
         <rect id="path-1" x="0" y="0.489051095" width="250" height="140"></rect>
         <linearGradient x1="69.9686682%" y1="35.9172346%" x2="90.8574896%" y2="67.024282%" id="linearGradient-3">
             <stop stop-color="#472FFF" stop-opacity="0.47885708" offset="0%"></stop>
-            <stop stop-color="#5551EE" stop-opacity="0.627786276" offset="100%"></stop>
+            <stop stop-color="#504BFF" stop-opacity="0.627786276" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="90.2354535%" y1="39.5009488%" x2="86.8262483%" y2="58.6282945%" id="linearGradient-4">
-            <stop stop-color="#3120F3" stop-opacity="0.489619755" offset="0%"></stop>
-            <stop stop-color="#383DF9" stop-opacity="0.466154939" offset="100%"></stop>
+        <linearGradient x1="86.8262483%" y1="38.386353%" x2="86.8262483%" y2="78.1955442%" id="linearGradient-4">
+            <stop stop-color="#1906E6" stop-opacity="0.489619755" offset="0%"></stop>
+            <stop stop-color="#4247F8" stop-opacity="0.181736233" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="89.9997455%" y1="40.8233885%" x2="87.0295052%" y2="57.4879219%" id="linearGradient-5">
-            <stop stop-color="#3619D5" stop-opacity="0.769258086" offset="0%"></stop>
-            <stop stop-color="#3E27CC" stop-opacity="0.196268575" offset="100%"></stop>
+        <linearGradient x1="88.0490408%" y1="46.52049%" x2="86.9196831%" y2="61.4559878%" id="linearGradient-5">
+            <stop stop-color="#3D1BFF" stop-opacity="0.769258086" offset="0%"></stop>
+            <stop stop-color="#2302EE" stop-opacity="0.0896252185" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g id="司南首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

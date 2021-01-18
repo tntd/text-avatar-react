@@ -83,7 +83,7 @@ export default () => {
 							onClick={() => {
 								message.info('点击头像');
 							}}
-							linearGradient={true}
+						// linearGradient={false}
 						/>
 					);
 				})

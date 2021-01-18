@@ -50,9 +50,11 @@ export default props => {
 |  ---- 	   |  ----  			| ----  		|  ----  		| ----						|
 | nickname	   | String 			| 是 			| - 			| 用户昵称 					  |
 | account 	   | String 			| 是 			| -				| 用户账号，用来判断使用颜色 	 |
+| empStatus    | number 		    | 否 			| 1 		    | 用户状态，2则为灰色 	        |
 | showPopover  | boolean 		    | 否			| true			| 是否显示popover浮层 	       |
 | size   	   | number 			| 否 			| 32 			| 头像大小（宽高） 	    	   |
 | linearGradient   | boolean 		| 否 			| false 		| 是否渐变 	            	  |
+| onClick 	   | function 		    | 否 			| -				| 卡片内的头像点击			 	|
 ### 浮层API
 |参数		  |数据类型			  |是否必填			|默认值			|备注						 |
 |  ---- 	 |  ----  			| ----  		|  ----  		| ----						|

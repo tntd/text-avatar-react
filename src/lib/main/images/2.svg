@@ -4,16 +4,16 @@
     <defs>
         <rect id="path-1" x="0" y="0.489051095" width="250" height="140"></rect>
         <linearGradient x1="90.1969126%" y1="34.1944333%" x2="86.6559845%" y2="64.7307466%" id="linearGradient-3">
-            <stop stop-color="#FF2581" stop-opacity="0.321787587" offset="0%"></stop>
-            <stop stop-color="#F90014" stop-opacity="0.211374563" offset="100%"></stop>
+            <stop stop-color="#FF2525" stop-opacity="0.321787587" offset="0%"></stop>
+            <stop stop-color="#F93600" stop-opacity="0.211374563" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="86.6559845%" y1="41.4055922%" x2="86.6559845%" y2="81.3171592%" id="linearGradient-4">
-            <stop stop-color="#FF3E3E" stop-opacity="0.883932474" offset="0%"></stop>
-            <stop stop-color="#FFA959" stop-opacity="0.180261145" offset="100%"></stop>
+            <stop stop-color="#EC6C03" stop-opacity="0.456840035" offset="0%"></stop>
+            <stop stop-color="#FF8800" stop-opacity="0.43911167" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="89.8850125%" y1="41.467098%" x2="86.8072656%" y2="58.7347967%" id="linearGradient-5">
-            <stop stop-color="#FFA142" stop-opacity="0.365685096" offset="0%"></stop>
-            <stop stop-color="#FF7300" stop-opacity="0.354539991" offset="100%"></stop>
+        <linearGradient x1="89.8850125%" y1="41.467098%" x2="86.8167659%" y2="58.6814955%" id="linearGradient-5">
+            <stop stop-color="#DB4301" stop-opacity="0.365685096" offset="0%"></stop>
+            <stop stop-color="#F44D00" stop-opacity="0.354539991" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g id="司南首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
