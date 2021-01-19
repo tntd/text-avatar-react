@@ -9,8 +9,9 @@ export default () => {
 		{
 			id: 415,
 			account: 'ao.liu',
-			empStatus: 1,
-			nickname: '柳波'
+			empStatus: 2,
+			nickname: '王小明',
+			linearGradient: true
 		},
 		{
 			id: 415,

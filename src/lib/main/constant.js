@@ -23,10 +23,11 @@ export const colorList = [
 	['#945EF7', '#7230e9'],
 	['#F24FC4', '#ce1299'],
 	['#6a5cff', '#3d2bfb'],
-	['#58C148', '#159d00']
+	['#58C148', '#159d00'],
+	['#c4c4c4', '#9e9e9e']
 ];
 
-export const getColors = (letter) => {
+export const getColors = (letter, empStatus) => {
 	let letterIndex = 0;
 	if (letter) {
 		let index = letterList.findIndex(item => item === letter);
@@ -36,7 +37,7 @@ export const getColors = (letter) => {
 	}
 	return {
 		colorIndex: letterIndex % 7,
-		currentColors: colorList[letterIndex % 7]
+		currentColors: empStatus === 1 ? colorList[letterIndex % 7] : colorList[7]
 	};
 };
 

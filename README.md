@@ -50,7 +50,7 @@ export default props => {
 |  ---- 	   |  ----  			| ----  		|  ----  		| ----						|
 | nickname	   | String 			| 是 			| - 			| 用户昵称 					  |
 | account 	   | String 			| 是 			| -				| 用户账号，用来判断使用颜色 	 |
-| empStatus    | number 		    | 否 			| 1 		    | 用户状态，2则为灰色 	        |
+| empStatus    | number 		    | 否 			| 1 		    | 用户状态，1是正常状态，2则为灰色 	  |
 | showPopover  | boolean 		    | 否			| true			| 是否显示popover浮层 	       |
 | size   	   | number 			| 否 			| 32 			| 头像大小（宽高） 	    	   |
 | linearGradient   | boolean 		| 否 			| false 		| 是否渐变 	            	  |

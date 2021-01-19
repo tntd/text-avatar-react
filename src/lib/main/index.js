@@ -38,9 +38,9 @@ const Main = (props) => {
 		}
 	}
 
-	let { currentColors, colorIndex } = getColors(key);
-	console.log('getColors(key)', getColors(key));
-	console.log('linearGradient', linearGradient);
+	let { currentColors, colorIndex } = getColors(key, empStatus);
+	// console.log('getColors(key)', getColors(key));
+	// console.log('linearGradient', linearGradient);
 
 	let colorBg = linearGradient ? `linear-gradient(to bottom right,${currentColors[0]},${currentColors[1]})` : null;
 	return (

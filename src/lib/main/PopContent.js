@@ -2,7 +2,7 @@ import React from 'react';
 import { waveImages } from './constant';
 
 export default props => {
-	const { nickname, cardConfig = [], nameWritten, onClick, currentColors, colorIndex, colorBg } = props;
+	const { nickname, cardConfig = [], nameWritten, onClick, currentColors, colorIndex, colorBg, empStatus } = props;
 
 	return (
 		<div className="popover-content">
@@ -14,7 +14,10 @@ export default props => {
 			>
 				<div
 					className='popover-content-header-wave'
-					style={{ backgroundImage: 'url(' + waveImages[colorIndex] + ')' }}
+					style={{
+						backgroundImage: 'url(' + waveImages[colorIndex] + ')',
+						filter: empStatus === 2 ? 'grayscale(1)' : null
+					}}
 				/>
 			</div>
 			<div className='popover-content-info'>
