@@ -37,7 +37,7 @@ export const getColors = (letter, empStatus) => {
 	}
 	return {
 		colorIndex: letterIndex % 7,
-		currentColors: empStatus === 1 ? colorList[letterIndex % 7] : colorList[7]
+		currentColors: empStatus === 2 ? colorList[7] : colorList[letterIndex % 7]
 	};
 };
 
