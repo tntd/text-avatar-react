@@ -122,6 +122,8 @@
 		}
 		.text-avatar {
 			& {
+				position: relative;
+				z-index: 10;
 				background: #3196FA;
 				border: 2px solid #FFFFFF;
 				box-shadow: 0 2px 5px 0 rgba(0,0,0,0.07);
@@ -146,6 +148,9 @@
 		}
 	}
 	.popover-content-body {
+		& {
+			min-height: 135px;
+		}
 		ul {
 			& {
 				list-style: none;
