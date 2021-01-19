@@ -27,7 +27,7 @@ export const colorList = [
 	['#c4c4c4', '#9e9e9e']
 ];
 
-export const getColors = (letter, empStatus) => {
+export const getColors = (letter, empStatus, randomColor) => {
 	let letterIndex = 0;
 	if (letter) {
 		let index = letterList.findIndex(item => item === letter);
@@ -35,9 +35,15 @@ export const getColors = (letter, empStatus) => {
 			letterIndex = index;
 		}
 	}
+	let currentColors = empStatus === 2 ? colorList[7] : colorList[letterIndex % 7];
+	let colorIndex = letterIndex % 7;
+	if (!randomColor) {
+		colorIndex = 0;
+		currentColors = colorList[0];
+	}
 	return {
-		colorIndex: letterIndex % 7,
-		currentColors: empStatus === 2 ? colorList[7] : colorList[letterIndex % 7]
+		colorIndex: colorIndex,
+		currentColors: currentColors
 	};
 };
 

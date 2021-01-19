@@ -9,7 +9,7 @@ import './index.less';
 const Main = (props) => {
 	const {
 		nickname = '', size = 32,
-		account, empStatus, trigger = 'hover',
+		account, empStatus, trigger = 'hover', randomColor = true,
 		placement = 'rightTop', style = {}, onClick, showPopover = true, linearGradient = false
 	} = props;
 
@@ -38,7 +38,7 @@ const Main = (props) => {
 		}
 	}
 
-	let { currentColors, colorIndex } = getColors(key, empStatus);
+	let { currentColors, colorIndex } = getColors(key, empStatus, randomColor);
 	// console.log('getColors(key)', getColors(key));
 	// console.log('linearGradient', linearGradient);
 
