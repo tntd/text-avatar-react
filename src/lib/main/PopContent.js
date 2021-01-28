@@ -5,7 +5,12 @@ export default props => {
 	const { nickname, cardConfig = [], nameWritten, onClick, currentColors, colorIndex, colorBg, empStatus } = props;
 
 	return (
-		<div className="popover-content">
+		<div
+			className="popover-content"
+			onClick={(e) => {
+				e.stopPropagation();
+			}}
+		>
 			<div
 				className='popover-content-header'
 				style={{
