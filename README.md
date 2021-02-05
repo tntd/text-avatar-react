@@ -56,8 +56,9 @@ export default props => {
 | linearGradient   | boolean 		| 否 			| false 		| 是否渐变 	            	  |
 | randomColor  | boolean 		    | 否 			| true			| 是否随机颜色，如果不随机，则为固定蓝色	|
 | onClick 	   | function 		    | 否 			| -				| 卡片内的头像点击			 	|
+| theme 	   | String 		    | 否 			| default		| 卡片内的主题，default、plant	|
 
-### 浮层API
+### 浮层相关API
 |参数		  |数据类型			  |是否必填			|默认值			|备注						 |
 |  ---- 	 |  ----  			| ----  		|  ----  		| ----						|
 | trigger	 | String 			| 否 			| hover 		| 浮层详情显示方式，同Popover   |

@@ -1,6 +1,6 @@
 import React from 'react';
 import TextAvatar from '../lib';
-import { message, Popover, Avatar } from 'antd';
+import { message, Popover } from 'antd';
 import 'antd/dist/antd.css';
 
 export default () => {
@@ -15,38 +15,59 @@ export default () => {
 		},
 		{
 			id: 415,
-			account: 'bonggang.liang',
+			account: 'ao.liu',
+			empStatus: 1,
+			nickname: '王小明',
+			linearGradient: true
+		},
+		{
+			id: 415,
+			account: 'b.liu',
+			empStatus: 1,
+			nickname: '桑桑',
+			linearGradient: true
+		},
+		{
+			id: 415,
+			account: 'c.liang',
 			empStatus: 1,
 			nickname: '梁洪刚'
 		},
 		{
 			id: 415,
-			account: 'cun.zhang',
+			account: 'd.zhang',
 			empStatus: 1,
 			nickname: '张俊'
 		},
 		{
 			id: 415,
-			account: 'dei.ze',
+			account: 'e.ze',
 			empStatus: 1,
 			nickname: '周泽飞'
 		},
 		{
 			id: 415,
-			account: 'eun.wang',
+			account: 'f.wang',
 			empStatus: 1,
 			nickname: '汪伦'
 		},
 		{
 			id: 415,
-			account: 'fun.wang',
+			account: 'g.wang',
 			empStatus: 1,
 			nickname: '汪伦',
 			linearGradient: true
 		},
 		{
 			id: 415,
-			account: 'gun.wang',
+			account: 'h.wang',
+			empStatus: 1,
+			nickname: '汪伦',
+			linearGradient: true
+		},
+		{
+			id: 415,
+			account: 'i.wang',
 			empStatus: 1,
 			nickname: '汪伦',
 			linearGradient: true
@@ -91,7 +112,8 @@ export default () => {
 								onClick={() => {
 									message.info('点击头像');
 								}}
-								theme='plant'
+								// theme='plant'
+								randomColor={false}
 								// showPopover={false}
 								// linearGradient={true}
 								{...item}

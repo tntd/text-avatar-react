@@ -9,8 +9,7 @@ const Main = (props) => {
 	const {
 		nickname = '', size = 32,
 		account, empStatus = 1, trigger = 'hover', randomColor = true, theme = 'default',
-		placement = 'rightTop', style = {}, showPopover = true, linearGradient = false,
-		onClick
+		placement = 'rightTop', style = {}, showPopover = true, linearGradient = false
 	} = props;
 
 	const isChinese = (obj) => {

@@ -23,26 +23,25 @@ export const images = {
 
 export const colors = {
 	default: [
-		['#7AD76C', '#63DE51'],
+		['#6F7DFC', '#4E60FF'],
+		['#72C854', '#71C651'],
 		['#59CDF3', '#3BC8F6'],
 		['#FA7079', '#FB4450'],
 		['#FCA35C', '#FE8A2E'],
 		['#945EF7', '#7D37FE'],
 		['#FF6ACF', '#FE3CC0'],
-		['#6F7DFC', '#4E60FF'],
 		['#8D83F9', '#6759FD'],
-		['#40CCB0', '#25D3B0'],
-		['#c4c4c4', '#9e9e9e']
+		['#1FC3A2', '#0DB7A1']
+
 	],
 	plant: [
+		['#5F96FB', '#2B75FF'],
 		['#59CDF3', '#3BC8F6'],
 		['#FA7079', '#FB4450'],
 		['#FCA35C', '#FE8A2E'],
 		['#40CCB0', '#25D3B0'],
-		['#5F96FB', '#2B75FF'],
 		['#8D83F9', '#6759FD'],
-		['#7AD76C', '#63DE51'],
-		['#c4c4c4', '#9e9e9e']
+		['#72C854', '#71C651']
 	]
 };
 
@@ -57,19 +56,22 @@ export const letterList = [
 export const getColors = (letter, empStatus, randomColor, theme) => {
 	let letterIndex = 0;
 	let selectColors = colors[theme] ? colors[theme] : colors['default'];
-	let colorSize = selectColors.length - 1;
+
 	if (letter) {
 		let index = letterList.findIndex(item => item === letter);
 		if (index > -1) {
 			letterIndex = index;
 		}
 	}
-	let currentColors = empStatus === 2 ? selectColors[colorSize] : selectColors[letterIndex % colorSize];
-	let colorIndex = letterIndex % colorSize;
-	if (!randomColor) {
+
+	let currentColors = empStatus === 2 ? ['#c4c4c4', '#9e9e9e'] : selectColors[letterIndex % selectColors.length];
+	let colorIndex = letterIndex % selectColors.length;
+
+	if (!randomColor && empStatus !== 2) {
 		colorIndex = 0;
 		currentColors = selectColors[0];
 	}
+
 	return {
 		colorIndex: colorIndex,
 		currentColors: currentColors
