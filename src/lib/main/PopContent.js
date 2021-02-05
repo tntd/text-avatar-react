@@ -1,8 +1,10 @@
 import React from 'react';
-import { waveImages } from './constant';
+import { images } from './constant';
 
 export default props => {
-	const { nickname, cardConfig = [], nameWritten, onClick, currentColors, colorIndex, colorBg, empStatus } = props;
+	const { nickname, cardConfig = [], nameWritten, onClick, currentColors, colorIndex, colorBg, empStatus, theme = 'default' } = props;
+
+	let selectImages = images[theme] ? images[theme] : images['default'];
 
 	return (
 		<div
@@ -11,16 +13,11 @@ export default props => {
 				e.stopPropagation();
 			}}
 		>
-			<div
-				className='popover-content-header'
-				style={{
-					backgroundColor: currentColors[0]
-				}}
-			>
+			<div className='popover-content-header'>
 				<div
 					className='popover-content-header-wave'
 					style={{
-						backgroundImage: 'url(' + waveImages[colorIndex] + ')',
+						backgroundImage: 'url(' + selectImages[colorIndex] + ')',
 						filter: empStatus === 2 ? 'grayscale(1)' : null
 					}}
 				/>
@@ -37,7 +34,7 @@ export default props => {
 						onClick && onClick();
 					}}
 				>
-					<span>{nameWritten}</span>
+					<span>{empStatus === 2 ? '离职' : nameWritten}</span>
 				</div>
 				<h2>{nickname}</h2>
 			</div>

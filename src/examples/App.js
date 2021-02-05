@@ -1,6 +1,6 @@
 import React from 'react';
 import TextAvatar from '../lib';
-import { message } from 'antd';
+import { message, Popover, Avatar } from 'antd';
 import 'antd/dist/antd.css';
 
 export default () => {
@@ -73,19 +73,31 @@ export default () => {
 			{
 				userList.map(item => {
 					return (
-						<TextAvatar
-							size={96}
-							key={item.id}
-							{...item}
-							cardConfig={cardConfig}
-							style={{
-								marginRight: '10px'
+						<Popover
+							content={<div>hi</div>}
+							title="Title"
+							onMouseEnter={(e) => {
+								console.log(e);
 							}}
-							onClick={() => {
-								message.info('点击头像');
-							}}
-						// linearGradient={false}
-						/>
+						>
+							<TextAvatar
+								size={96}
+								key={item.id}
+								cardConfig={cardConfig}
+								style={{
+									marginRight: '10px'
+								}}
+
+								onClick={() => {
+									message.info('点击头像');
+								}}
+								theme='plant'
+								// showPopover={false}
+								// linearGradient={true}
+								{...item}
+							/>
+						</Popover>
+
 					);
 				})
 			}

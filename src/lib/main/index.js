@@ -1,7 +1,6 @@
 import React from 'react';
 import { getColors } from './constant';
 import { Avatar, Popover } from 'antd';
-import 'antd';
 import PopContent from './PopContent';
 
 import './index.less';
@@ -9,8 +8,9 @@ import './index.less';
 const Main = (props) => {
 	const {
 		nickname = '', size = 32,
-		account, empStatus, trigger = 'hover', randomColor = true,
-		placement = 'rightTop', style = {}, onClick, showPopover = true, linearGradient = false
+		account, empStatus = 1, trigger = 'hover', randomColor = true, theme = 'default',
+		placement = 'rightTop', style = {}, showPopover = true, linearGradient = false,
+		onClick
 	} = props;
 
 	const isChinese = (obj) => {
@@ -38,11 +38,9 @@ const Main = (props) => {
 		}
 	}
 
-	let { currentColors, colorIndex } = getColors(key, empStatus, randomColor);
-	// console.log('getColors(key)', getColors(key));
-	// console.log('linearGradient', linearGradient);
-
+	let { currentColors, colorIndex } = getColors(key, empStatus, randomColor, theme);
 	let colorBg = linearGradient ? `linear-gradient(to bottom right,${currentColors[0]},${currentColors[1]})` : null;
+
 	return (
 		<div
 			className="tntx-text-avatar"
@@ -80,15 +78,13 @@ const Main = (props) => {
 			{
 				!showPopover &&
 				<Avatar
+					{...props}
 					size={size}
 					style={{
 						backgroundColor: empStatus === 2 ? disabledColor : currentColors[0],
 						backgroundImage: colorBg,
 						verticalAlign: 'middle',
 						cursor: 'pointer'
-					}}
-					onClick={() => {
-						onClick && onClick();
 					}}
 				>
 					{nameWritten}

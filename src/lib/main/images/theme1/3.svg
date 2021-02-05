@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="251px" height="141px" viewBox="0 0 251 141" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>3</title>
+    <defs>
+        <path d="M4,0.489051095 L246,0.489051095 C248.209139,0.489051095 250,2.2799121 250,4.48905109 L250,140.489051 L250,140.489051 L0,140.489051 L0,4.48905109 C-2.705415e-16,2.2799121 1.790861,0.489051095 4,0.489051095 Z" id="path-1"></path>
+    </defs>
+    <g id="司南首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3" transform="translate(0.833333, 0.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="蒙版" fill="#FF606B" xlink:href="#path-1"></use>
+            <path d="M-2.78767792,22.8689273 C51.6598235,16.4178138 87.3386125,32.7675087 104.248689,71.9180119 C129.613804,130.643767 153.717148,88.5772377 180.108202,140.927943 L-3.33333333,142.5 L-2.78767792,22.8689273 Z" id="路径-32备份-3" fill="#EF4F5A" mask="url(#mask-2)"></path>
+            <path d="M157.165137,-4 C149.206868,46 181.374044,71 253.666667,71 L253.666667,-0.263928337 L157.165137,-4 Z" id="路径-33备份-3" fill="#FF848C" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>
