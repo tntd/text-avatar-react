@@ -94,32 +94,25 @@ export default () => {
 			{
 				userList.map(item => {
 					return (
-						<Popover
-							content={<div>hi</div>}
-							title="Title"
-							onMouseEnter={(e) => {
-								console.log(e);
+						<TextAvatar
+							size={96}
+							key={item.id}
+							cardConfig={cardConfig}
+							style={{
+								marginRight: '10px'
 							}}
+
+							onClick={() => {
+								message.info('点击头像');
+							}}
+							theme='plant'
+							// randomColor={false}
+							// showPopover={false}
+							// linearGradient={true}
+							{...item}
 						>
-							<TextAvatar
-								size={96}
-								key={item.id}
-								cardConfig={cardConfig}
-								style={{
-									marginRight: '10px'
-								}}
-
-								onClick={() => {
-									message.info('点击头像');
-								}}
-								// theme='plant'
-								randomColor={false}
-								// showPopover={false}
-								// linearGradient={true}
-								{...item}
-							/>
-						</Popover>
-
+							{/* hihihi */}
+						</TextAvatar>
 					);
 				})
 			}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { getColors } from './constant';
 import { Avatar, Popover } from 'antd';
 import PopContent from './PopContent';
@@ -7,6 +7,7 @@ import './index.less';
 
 const Main = (props) => {
 	const {
+		children,
 		nickname = '', size = 32,
 		account, empStatus = 1, trigger = 'hover', randomColor = true, theme = 'default',
 		placement = 'rightTop', style = {}, showPopover = true, linearGradient = false
@@ -40,6 +41,7 @@ const Main = (props) => {
 	let { currentColors, colorIndex } = getColors(key, empStatus, randomColor, theme);
 	let colorBg = linearGradient ? `linear-gradient(to bottom right,${currentColors[0]},${currentColors[1]})` : null;
 
+	console.log('props', props);
 	return (
 		<div
 			className="tntx-text-avatar"
@@ -61,33 +63,40 @@ const Main = (props) => {
 					placement={placement}
 					overlayClassName='tntx-text-avatar-popover'
 				>
-					<Avatar
-						size={size}
-						style={{
-							backgroundColor: empStatus === 2 ? disabledColor : currentColors[0],
-							backgroundImage: colorBg,
-							verticalAlign: 'middle',
-							cursor: 'default'
-						}}
-					>
-						{nameWritten}
-					</Avatar>
+					{
+						children ? children
+							: <Avatar
+								size={size}
+								style={{
+									backgroundColor: empStatus === 2 ? disabledColor : currentColors[0],
+									backgroundImage: colorBg,
+									verticalAlign: 'middle',
+									cursor: 'default'
+								}}
+							>
+								{nameWritten}
+							</Avatar>
+					}
 				</Popover>
 			}
 			{
 				!showPopover &&
-				<Avatar
-					{...props}
-					size={size}
-					style={{
-						backgroundColor: empStatus === 2 ? disabledColor : currentColors[0],
-						backgroundImage: colorBg,
-						verticalAlign: 'middle',
-						cursor: 'pointer'
-					}}
-				>
-					{nameWritten}
-				</Avatar>
+				<Fragment>
+					{
+						children ? children : <Avatar
+							{...props}
+							size={size}
+							style={{
+								backgroundColor: empStatus === 2 ? disabledColor : currentColors[0],
+								backgroundImage: colorBg,
+								verticalAlign: 'middle',
+								cursor: 'pointer'
+							}}
+						>
+							{nameWritten}
+						</Avatar>
+					}
+				</Fragment>
 			}
 		</div>
 	);
