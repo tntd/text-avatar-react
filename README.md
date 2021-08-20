@@ -46,17 +46,18 @@ export default props => {
 ## API
 
 ### 组件API
-|参数		    |数据类型			  |是否必填			|默认值			|备注						 |
-|  ---- 	   |  ----  			| ----  		|  ----  		| ----						|
-| nickname	   | String 			| 是 			| - 			| 用户昵称 					  |
-| account 	   | String 			| 是 			| -				| 用户账号，用来判断使用颜色 	 |
-| empStatus    | number 		    | 否 			| 1 		    | 用户状态，1是正常状态，2则为灰色 	  |
-| showPopover  | boolean 		    | 否			| true			| 是否显示popover浮层 	       |
-| size   	   | number 			| 否 			| 32 			| 头像大小（宽高） 	    	   |
-| linearGradient   | boolean 		| 否 			| false 		| 是否渐变 	            	  |
-| randomColor  | boolean 		    | 否 			| true			| 是否随机颜色，如果不随机，则为固定蓝色	|
-| onClick 	   | function 		    | 否 			| -				| 卡片内的头像点击			 	|
-| theme 	   | String 		    | 否 			| default		| 卡片内的主题，default、plant	|
+|参数		    		 |数据类型			  |是否必填			|默认值			|备注						 |
+|  ---- 	   			|  ----  			| ----  		|  ----  		| ----						|
+| nickname	   			| String 			| 是 			| - 			| 用户昵称 					  |
+| account 	   			| String 			| 是 			| -				| 用户账号，用来判断使用颜色 	 |
+| empStatus    			| number 		    | 否 			| 1 		    | 用户状态，1是正常状态，2则为灰色 	  |
+| showPopover  			| boolean 		    | 否			| true			| 是否显示popover浮层 	       |
+| size   	   			| number 			| 否 			| 32 			| 头像大小（宽高） 	    	   |
+| linearGradient   		| boolean 			| 否 			| false 		| 是否渐变 	            	  |
+| randomColor  			| boolean 		    | 否 			| true			| 是否随机颜色，如果不随机，则为固定蓝色	|
+| onClick 	   			| function 		    | 否 			| -				| 卡片内的头像点击			 	|
+| theme 	   			| String 		    | 否 			| default		| 卡片内的主题，default、plant	|
+| sameAsChildren 	    | boolean 		    | 否 			| true			| 卡片内的头像是否和children一样	|
 
 ### 浮层相关API
 |参数		  |数据类型			  |是否必填			|默认值			|备注						 |

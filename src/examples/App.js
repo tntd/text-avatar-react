@@ -56,7 +56,8 @@ export default () => {
 			account: 'g.wang',
 			empStatus: 1,
 			nickname: '汪伦',
-			linearGradient: true
+			linearGradient: true,
+			sameAsChildren: false
 		},
 		{
 			id: 415,
@@ -112,6 +113,7 @@ export default () => {
 							{...item}
 						>
 							{/* hihihi */}
+							<img width='40' src='https://sinan.tongdun.me/cdn/bucket/graph/2020112710264265_zefei.jpg' />
 						</TextAvatar>
 					);
 				})

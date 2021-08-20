@@ -2,7 +2,7 @@ import React from 'react';
 import { images } from './constant';
 
 export default props => {
-	const { nickname, cardConfig = [], nameWritten, onClick, currentColors, colorIndex, colorBg, empStatus, theme = 'default' } = props;
+	const { sameAsChildren, children, nickname, cardConfig = [], nameWritten, onClick, currentColors, colorIndex, colorBg, empStatus, theme = 'default' } = props;
 
 	let selectImages = images[theme] ? images[theme] : images['default'];
 
@@ -34,7 +34,12 @@ export default props => {
 						onClick && onClick();
 					}}
 				>
-					<span>{empStatus === 2 ? '离职' : nameWritten}</span>
+					{
+						!sameAsChildren && <span>{empStatus === 2 ? '离职' : nameWritten}</span>
+					}
+					{
+						children && sameAsChildren ? children : <span>{empStatus === 2 ? '离职' : nameWritten}</span>
+					}
 				</div>
 				<h2>{nickname}</h2>
 			</div>

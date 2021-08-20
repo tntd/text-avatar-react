@@ -10,7 +10,11 @@ const Main = (props) => {
 		children,
 		nickname = '', size = 32,
 		account, empStatus = 1, trigger = 'hover', randomColor = true, theme = 'default',
-		placement = 'rightTop', style = {}, showPopover = true, linearGradient = false
+		placement = 'rightTop',
+		style = {},
+		showPopover = true,
+		linearGradient = false,
+		sameAsChildren = true
 	} = props;
 
 	const isChinese = (obj) => {
@@ -56,6 +60,7 @@ const Main = (props) => {
 							currentColors={currentColors}
 							colorBg={colorBg}
 							nameWritten={nameWritten}
+							sameAsChildren={sameAsChildren}
 							{...props}
 						/>
 					}
