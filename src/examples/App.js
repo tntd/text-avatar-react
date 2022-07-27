@@ -64,14 +64,16 @@ export default () => {
 			account: 'h.wang',
 			empStatus: 1,
 			nickname: '汪伦',
-			linearGradient: true
+			linearGradient: true,
+			sameAsChildren: false
 		},
 		{
 			id: 415,
 			account: 'i.wang',
 			empStatus: 1,
 			nickname: '汪伦',
-			linearGradient: true
+			linearGradient: true,
+			sameAsChildren: false
 		}
 	];
 	const cardConfig = [
@@ -102,7 +104,6 @@ export default () => {
 							style={{
 								marginRight: '10px'
 							}}
-
 							onClick={() => {
 								message.info('点击头像');
 							}}
@@ -112,8 +113,8 @@ export default () => {
 							// linearGradient={true}
 							{...item}
 						>
-							{/* hihihi */}
-							<img width='40' src='https://sinan.tongdun.me/cdn/bucket/graph/2020112710264265_zefei.jpg' />
+							昵称是{item.nickname}
+							{/* <img width='40' src='https://sinan.tongdun.me/cdn/bucket/graph/2020112710264265_zefei.jpg' /> */}
 						</TextAvatar>
 					);
 				})
