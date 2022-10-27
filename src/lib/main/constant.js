@@ -1,23 +1,42 @@
+
+import theme11 from './images/theme1/1.svg';
+import theme12 from './images/theme1/2.svg';
+import theme13 from './images/theme1/3.svg';
+import theme14 from './images/theme1/4.svg';
+import theme15 from './images/theme1/5.svg';
+import theme16 from './images/theme1/6.svg';
+import theme17 from './images/theme1/7.svg';
+import theme18 from './images/theme1/8.svg';
+import theme19 from './images/theme1/9.svg';
+
+import theme21 from './images/theme2/1.svg';
+import theme22 from './images/theme2/2.svg';
+import theme23 from './images/theme2/3.svg';
+import theme24 from './images/theme2/4.svg';
+import theme25 from './images/theme2/5.svg';
+import theme26 from './images/theme2/6.svg';
+import theme27 from './images/theme2/7.svg';
+
 export const images = {
 	default: {
-		0: require('./images/theme1/1.svg'),
-		1: require('./images/theme1/2.svg'),
-		2: require('./images/theme1/3.svg'),
-		3: require('./images/theme1/4.svg'),
-		4: require('./images/theme1/5.svg'),
-		5: require('./images/theme1/6.svg'),
-		6: require('./images/theme1/7.svg'),
-		7: require('./images/theme1/8.svg'),
-		8: require('./images/theme1/9.svg')
+		0: theme11,
+		1: theme12,
+		2: theme13,
+		3: theme14,
+		4: theme15,
+		5: theme16,
+		6: theme17,
+		7: theme18,
+		8: theme19
 	},
 	plant: {
-		0: require('./images/theme2/1.svg'),
-		1: require('./images/theme2/2.svg'),
-		2: require('./images/theme2/3.svg'),
-		3: require('./images/theme2/4.svg'),
-		4: require('./images/theme2/5.svg'),
-		5: require('./images/theme2/6.svg'),
-		6: require('./images/theme2/7.svg')
+		0: theme21,
+		1: theme22,
+		2: theme23,
+		3: theme24,
+		4: theme25,
+		5: theme26,
+		6: theme27
 	}
 };
 
