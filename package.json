@@ -1,6 +1,6 @@
 {
 	"name": "@tntx/text-avatar-react",
-	"version": "1.1.15",
+	"version": "1.1.17",
 	"main": "dist/index.js",
 	"module": "dist/index.js",
 	"description": "同盾UED文字头像组件",
@@ -25,9 +25,6 @@
 	"files": [
 		"dist"
 	],
-	"dependencies": {
-		"antd": "^3.26.17"
-	},
 	"devDependencies": {
 		"@babel/core": "^7.10.2",
 		"@babel/plugin-transform-runtime": "^7.10.1",
@@ -79,6 +76,7 @@
 		"whatwg-fetch": "2.0.3"
 	},
 	"peerDependencies": {
+		"antd": ">=3.20.1",
 		"react": ">=16.3.2",
 		"react-dom": ">=16.3.2"
 	},

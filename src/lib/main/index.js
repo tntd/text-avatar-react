@@ -45,7 +45,6 @@ const Main = (props) => {
 	let { currentColors, colorIndex } = getColors(key, empStatus, randomColor, theme);
 	let colorBg = linearGradient ? `linear-gradient(to bottom right,${currentColors[0]},${currentColors[1]})` : null;
 
-	console.log('props', props);
 	return (
 		<div
 			className="tntx-text-avatar"
