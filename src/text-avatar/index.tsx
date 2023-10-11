@@ -1,14 +1,41 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, ComponentProps } from 'react';
 import { getColors } from './constant';
-import { Avatar, Popover } from 'antd';
+import { Avatar, Popover, TooltipProps } from 'antd';
 import PopContent from './PopContent';
 
 import './index.less';
 
-const Main = (props: any) => {
+export interface TextAvatarPropsType extends ComponentProps<'div'> {
+  id?: any;
+  nickname: string;
+  size?: number;
+  account?: string;
+  empStatus?: number;
+  randomColor?: boolean;
+  theme?: 'default' | 'plant';
+  cardConfig: { label: string; value: string }[];
+  trigger?: 'hover' | 'click';
+  placement?:
+    | 'top'
+    | 'left'
+    | 'right'
+    | 'bottom'
+    | 'topLeft'
+    | 'topRight'
+    | 'bottomLeft'
+    | 'bottomRight'
+    | 'leftTop'
+    | 'leftBottom'
+    | 'rightTop'
+    | 'rightBottom';
+  showPopover?: boolean;
+  linearGradient?: boolean;
+  sameAsChildren?: boolean;
+}
+const Main = (props: TextAvatarPropsType) => {
   const {
     children,
-    nickname = '',
+    nickname = 'unknown',
     size = 32,
     account,
     empStatus = 1,
@@ -34,8 +61,8 @@ const Main = (props: any) => {
   const disabledColor = '#9E9E9E';
 
   const newNickname =
-    nickname.match(/[^0-9]+/g) && nickname.match(/[^0-9]+/g).length > 0
-      ? nickname.match(/[^0-9]+/g)[0]
+    nickname.match(/[^0-9]+/g) && (nickname.match(/[^0-9]+/g) || []).length > 0
+      ? (nickname.match(/[^0-9]+/g) || ['unknown'])[0]
       : nickname;
   const nameLen = newNickname.length;
   let nameWritten = newNickname;
@@ -96,11 +123,10 @@ const Main = (props: any) => {
             children
           ) : (
             <Avatar
-              {...props}
               size={size}
               style={{
                 backgroundColor: empStatus === 2 ? disabledColor : currentColors[0],
-                backgroundImage: colorBg,
+                backgroundImage: colorBg || '',
                 verticalAlign: 'middle',
                 cursor: 'pointer',
               }}

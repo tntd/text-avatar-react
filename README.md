@@ -13,33 +13,33 @@ import { message } from 'antd';
 import TextAvatar from '@tntx/text-avatar-react';
 
 export default props => {
-	const user = {
-	    id: 10,
-		account: 'xiaoming',
-		empStatus: 1,
-		nickname: '王小明'	 
-	};
+  const user = {
+    id: 10,
+	account: 'xiaoming',
+	empStatus: 1,
+	nickname: '王小明'	 
+  };
 
-	const cardConfig = [
-		{
-			label: '部门',
-			value: '企业技术部-PaaS-UED'
-		},
-		{
-			label: '邮箱',
-			value: 'xiaoming@qq.com'
-		}
-	];
+  const cardConfig = [
+    {
+	  label: '部门',
+	  value: '企业技术部-PaaS-UED'
+	},
+	{
+	  label: '邮箱',
+	  value: 'xiaoming@qq.com'
+	}
+  ];
 
-	return (
-		<TextAvatar
-			{...user}
-			cardConfig={cardConfig}
-			onClick={() => {
-				message.info('跳转链接');
-			}}
-		/>
-	);
+  return (
+	<TextAvatar
+	  {...user}
+	  cardConfig={cardConfig}
+	  onClick={() => {
+	    message.info('跳转链接');
+	  }}
+	/>
+  );
 };
 ```
 

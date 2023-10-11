@@ -1,6 +1,2 @@
-// packages/index.ts
-// export { default as Button } from './Button';
-// export type { ButtonProps } from './Button';
-// export { default as Divider } from './Divider';
-// export type { DividerProps } from './Divider';
+export type { TextAvatarPropsType } from './text-avatar';
 export { default as TextAvatar } from './text-avatar';
