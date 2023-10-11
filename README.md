@@ -1,4 +1,4 @@
-# 同盾UED文字头像组件
+# text-avatar-react 文字头像组件
 
 
 ## 安装
